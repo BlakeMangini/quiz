@@ -1,0 +1,103 @@
+body {
+background-color: darkgoldenrod;
+font-family: Garamond;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: cornsilk;
+border-radius: 10px;
+}
+
+#header {
+border: 3px solid darkgoldenrod;
+padding-bottom:330px;
+height: 100px;
+width: auto;    
+background: beige;
+background-image: url("charmtour.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+color: goldenrod;
+margin-bottom: 20px;
+text-align:left;
+border-radius:20px;
+
+}
+
+#home{
+  text-align: center;
+    
+}
+
+h1{
+    font-weight: bold;
+  
+    color: goldenrod;
+    
+}
+
+h2{
+   font-size: 30px 
+}
+
+h3{
+ font-size: 25px;
+padding-bottom:10px;    
+}
+
+p{
+    font-size: 30px
+    
+}
+
+
+
+label {
+display: block;
+padding-bottom:2px;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+.btn {
+width:auto;
+border-radius: 20px;
+background-color:darkgoldenrod;
+border-color: darkgoldenrod;
+}
+
+.btn:hover{
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
+
+.btn:active{
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod;
+}
+.btn:focus{
+    background-color: darkgoldenrod;
+    border-color: darkgoldenrod; }
+
+.row {
+  
+    text-align: center;
+}
+
+hr.solid{
+    border-top: 4px solid darkgoldenrod;
+
+}
+
+hr.dashed{
+    border-top:4px;
+    color: darkgoldenrod;
+}

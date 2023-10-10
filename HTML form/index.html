@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+     <link rel="stylesheet" href="styles.css">
+
+<title>How Much do You Know Mariah Carey?</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body>
+    
+    
+<div id="main">
+     <h1>How Well Do You Know Mariah Carey?</h1>
+<div id="header">
+    
+<div id="home" class="container-fluid p-2">
+   
+</div>
+    </div>
+
+
+
+<h3> Mariah Carey has consistently dominated the music charts throughout her career, holding a number of records that span many decades. Some regard her as one of the most talented artists/songwriters in the industry; but how well do YOU know her?</h3>    
+  
+    
+ <hr class="solid">
+    
+
+<form  id="form1">
+
+<div class="row">
+<div class="col-md-6">  
+    
+<h2>What is Mariah's dog's name?</h2>
+</div>    
+<div class="col-md-6">
+<label for="dog_henry"><input type="radio" name="dog" value="0" id="dog_henry" />Henry</label>
+<label for="dog_jack"><input type="radio" name="dog" value="20" id="dog_jack" />Jack</label>
+<label for="dog_dexter"><input type="radio" name="dog" value="0" id="dog_dexter" />Dexter</label>
+<label for="dog_mimi"><input type="radio" name="dog" value="0" id="dog_mimi"/>Mimi</label>
+</div>
+</div>
+
+    <hr class="dashed">
+    
+<div class="row">
+<div class="col-md-6">
+    
+<h2>Which album did Mariah release first?</h2>
+</div>  
+<div class="col-md-6">    
+<label for="album_butterfly"><input type="radio" name="album" value="0" id="album_butterfly"/>Butterfly</label>
+<label for="album_mc"><input type="radio" name="album" value="20" id="album_mc"/>Mariah Carey</label>
+<label for="album_rainbow"><input type="radio" name="album" value="0" id="album_rainbow" />Rainbow</label>
+<label for="album_charm"><input type="radio" name="album" value="0" id="album_charm" />Charmbracelet</label>
+</div>
+</div>
+
+    <hr class="dashed">
+    
+<div class="row">
+<div class="col-md-6">
+    
+<h2>What are Mariah's fans called?</h2>
+</div>    
+<div class="col-md-6">
+<label for="name_carey"><input type="radio" name="fans" value="0" id="name_carey" />Carriers</label>
+<label for="name_angel"><input type="radio" name="fans" value="0" id="name_angel" />Angels</label>
+<label for="name_lambs"><input type="radio" name="fans" value="20" id="name_lambs" />Lambs</label>
+<label for="name_mariah"><input type="radio" name="fans" value="0" id="name_mariah" />Mariahinator</label>
+</div>
+</div>
+
+    <hr class="dashed">
+    
+<div class="row">
+<div class="col-md-6">    
+    
+<h2>Who was Mariah's first husband?</h2>
+</div>    
+<div class="col-md-6">      
+<label for="spouse_derek"><input type="radio" name="husband" value="0" id="spouse_derek" />Derek Jeter</label>
+<label for="spouse_nick"><input type="radio" name="husband" value="0" id="spouse_nick" />Nick Cannon</label>
+<label for="spouse_bryan"><input type="radio" name="husband" value="0" id="spouse_bryan" />Bryan Tanaka</label>
+<label for="spouse_tommy"><input type="radio" name="husband"  value="20" id="spouse_tommy" />Tommy Mottola</label>
+</div>
+</div>
+
+    <hr class="dashed">
+    
+<div class="row">
+<div class="col-md-6"> 
+    
+<h2>How long did it take Mariah to write "All I want for Christmas is You"?</h2>
+</div>
+<div class="col-md-6">      
+<label for="christmas_month"><input type="radio" name="merrychrist" value="0" id="christmas_month" />a month</label>
+<label for="christmas_minute"><input type="radio" name="merrychrist" value="20" id="christmas_minute" />10 minutes</label>
+<label for="christmas_week"><input type="radio" name="merrychrist" value="0" id="christmas_week" />1 week</label>
+<label for="christmas_day"><input type="radio" name="merrychrist"  value="0" id="christmas_day" />4 days</label>
+</div>
+</div>
+
+<input class="btn btn-primary" type="submit" value="Submit">
+<input class="btn btn-primary" type="reset" value="Reset">
+    
+</form>
+
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+</div><!-- close main div -->
+
+    
+    
+    <script>
+document.getElementById("form1").onsubmit=function(event) {
+ if(document.querySelector('input[name = "dog"]:checked') &&
+    document.querySelector('input[name = "album"]:checked') &&
+    document.querySelector('input[name = "fans"]:checked')&& 
+    document.querySelector('input[name = "husband"]:checked') && 
+    document.querySelector('input[name = "merrychrist"]:checked')){
+
+    
+       dog = parseInt(document.querySelector('input[name = "dog"]:checked').value);
+	   album = parseInt(document.querySelector('input[name = "album"]:checked').value);
+	   fans = parseInt(document.querySelector('input[name = "fans"]:checked').value);
+	   husband = parseInt(document.querySelector('input[name = "husband"]:checked').value);
+        merrychrist = parseInt(document.querySelector('input[name = "merrychrist"]:checked').value);
+
+        /* formula for calculating the score*/
+	   result = dog + album + fans + husband + merrychrist;
+
+	document.getElementById("grade").innerHTML = result;
+
+/* grading scale: be sure to have imgs correctly sourced when zipping*/
+ grading = [
+	   {score:0,feedback:"I don't think you really KNOW her..", image: "none.jpg"},
+	   {score:20,feedback:"You need to spend more time listening to greatness.", image: "poor.jpg"},
+	   {score:40,feedback:"There always room for improvement.", image: "avg.jpg"},
+	   {score:60,feedback:"So close, yet so far. Try again.", image: "above.jpg"},
+       {score:80,feedback:"You got this... So close!", image: "almost.jpg"},
+	   {score:100,feedback:"Nice! You must know the songstress yourself!", image: "excellent.jpg"}
+	   ];
+
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+ event.preventDefault();
+ }
+
+    
+        else {
+alert("Fill out all questions before submitting!");
+event.preventDefault();
+        }
+    
+document.getElementById("grade2").innerHTML = result2;
+    
+
+
+    
+    
+}
+</script>
+
+
+
+    </body>
+</html>
+
+
